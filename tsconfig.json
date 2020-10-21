@@ -6,6 +6,14 @@
     "moduleResolution": "node",
     "noEmit": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": ["./src/*"],
+      "@redux/*": ["./src/redux/*"],
+      "@components/*": ["./src/components/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@styles/*": ["./src/styles/*"]
+    }
   }
 }
