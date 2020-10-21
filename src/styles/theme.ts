@@ -18,12 +18,12 @@ const theme = {
       color: colors.white,
     },
     h1Style: {
-      fontWeight: 'normal',
+      fontWeight: 'normal' as 'normal',
       fontFamily: APP_FONT_FAMILY.semiBold,
       marginVertical: 15,
     },
     h4Style: {
-      fontWeight: 'normal',
+      fontWeight: 'normal' as 'normal',
       fontFamily: APP_FONT_FAMILY.medium,
       marginVertical: 15,
     },
