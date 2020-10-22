@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
   content: {
     paddingVertical: 10,
     paddingHorizontal: 20,
+    minHeight: '100%',
   },
 });
 

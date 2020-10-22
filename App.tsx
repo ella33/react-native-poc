@@ -10,7 +10,7 @@ import HomeNavigator from '@screens/home/HomeNavigator';
 import SettingsNavigator from '@screens/settings/SettingsNavigator';
 import ProfileNavigator from '@screens/profile/ProfileNavigator';
 import theme from '@styles/theme';
-import { APP_FONT_FAMILY, API_BASE_URL } from '@app/Constants';
+import { APP_FONT_FAMILY, API_BASE_URL, APP_SCREENS } from '@app/Constants';
 import axios from 'axios';
 
 axios.defaults.baseURL = API_BASE_URL;
@@ -59,9 +59,9 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <Provider store={store}>
           <Tab.Navigator tabBarOptions={tabBarOptions}>
-            <Tab.Screen options={tabOptions.home} name="Home" component={HomeNavigator} />
-            <Tab.Screen options={tabOptions.settings} name="Settings" component={SettingsNavigator} />
-            <Tab.Screen options={tabOptions.profile} name="Profile" component={ProfileNavigator} />
+            <Tab.Screen options={tabOptions.home} name={APP_SCREENS.home} component={HomeNavigator} />
+            <Tab.Screen options={tabOptions.settings} name={APP_SCREENS.settings} component={SettingsNavigator} />
+            <Tab.Screen options={tabOptions.profile} name={APP_SCREENS.profile} component={ProfileNavigator} />
           </Tab.Navigator>
         </Provider>
       </ThemeProvider>

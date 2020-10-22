@@ -1,5 +1,8 @@
 import * as colors from './colors';
-import { APP_FONT_FAMILY } from '@app/Constants';
+import Divider from './components/Divider';
+import Text from './components/Text';
+import Button from './components/Button';
+import Input from './components/Input';
 
 const theme = {
   colors: {
@@ -9,25 +12,10 @@ const theme = {
     black: colors.black,
     grey0: colors.grey0,
   },
-  Divider: {
-    marginVertical: 20,
-  },
-  Text: {
-    style: {
-      fontFamily: APP_FONT_FAMILY.regular,
-      color: colors.white,
-    },
-    h1Style: {
-      fontWeight: 'normal' as 'normal',
-      fontFamily: APP_FONT_FAMILY.semiBold,
-      marginVertical: 15,
-    },
-    h4Style: {
-      fontWeight: 'normal' as 'normal',
-      fontFamily: APP_FONT_FAMILY.medium,
-      marginVertical: 15,
-    },
-  },
+  Divider,
+  Text,
+  Button,
+  Input,
 };
 
 export default theme;

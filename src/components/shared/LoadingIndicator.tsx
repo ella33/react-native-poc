@@ -8,15 +8,25 @@ type Props = {
 
 const LoadingIndicator: React.FC<PropsWithChildren<Props>> = ({ children, busy }) => (
   <View style={styles.wrapper}>
-    {busy ? <ActivityIndicator color={primary} size="large" /> : children}
+    {busy
+      ? (
+        <View style={styles.loadingIndicatorWrapper}>
+          <ActivityIndicator color={primary} size="large" />
+        </View>
+      )
+      : children}
   </View>
 );
 
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    justifyContent: 'center',
   },
+  loadingIndicatorWrapper: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+  }
 });
 
 export default LoadingIndicator;
