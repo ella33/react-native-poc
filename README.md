@@ -1,3 +1,4 @@
+![Screenshot](app-preview.gif)
 # React Native Application
 The purpose of this project is to demonstrate the use of:
 - React Native Elements for UI https://reactnativeelements.com
