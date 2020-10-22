@@ -1,0 +1,7 @@
+{
+  "name": "My React App",
+  "version": "1.0.0",
+  "android": {
+    "package": "io.expo.myreactapp"
+  }
+}

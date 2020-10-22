@@ -15,31 +15,40 @@ import axios from 'axios';
 
 axios.defaults.baseURL = API_BASE_URL;
 
-const tabBarOptions = {
-  activeTintColor: theme.colors.white,
-  style: {
-    height: 60,
-    backgroundColor: theme.colors.black,
-    borderTopColor: theme.colors.black,
-  },
-};
+const Main: React.FC<{}> = () => {
+  const Tab = createBottomTabNavigator();
+  const tabBarOptions = {
+    activeTintColor: theme.colors.white,
+    style: {
+      height: 60,
+      backgroundColor: theme.colors.black,
+      borderTopColor: theme.colors.black,
+    },
+  };
 
-const tabOptions = {
-  home: {
-    tabBarLabel: '',
-    tabBarIcon: (props) => <Icon name="home" {...props} />,
-  },
-  settings: {
-    tabBarLabel: '',
-    tabBarIcon: (props) => <Icon name="settings" {...props} />,
-  },
-  profile: {
-    tabBarLabel: '',
-    tabBarIcon: (props) => <Icon name="account-circle" {...props} />,
-  },
-};
+  const tabOptions = {
+    home: {
+      tabBarLabel: '',
+      tabBarIcon: (props) => <Icon name="home" {...props} />,
+    },
+    settings: {
+      tabBarLabel: '',
+      tabBarIcon: (props) => <Icon name="settings" {...props} />,
+    },
+    profile: {
+      tabBarLabel: '',
+      tabBarIcon: (props) => <Icon name="account-circle" {...props} />,
+    },
+  };
 
-const Tab = createBottomTabNavigator();
+  return (
+    <Tab.Navigator tabBarOptions={tabBarOptions}>
+      <Tab.Screen options={tabOptions.home} name={APP_SCREENS.home} component={HomeNavigator} />
+      <Tab.Screen options={tabOptions.settings} name={APP_SCREENS.settings} component={SettingsNavigator} />
+      <Tab.Screen options={tabOptions.profile} name={APP_SCREENS.profile} component={ProfileNavigator} />
+    </Tab.Navigator>
+  );
+}
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -58,11 +67,7 @@ export default function App() {
     <NavigationContainer>
       <ThemeProvider theme={theme}>
         <Provider store={store}>
-          <Tab.Navigator tabBarOptions={tabBarOptions}>
-            <Tab.Screen options={tabOptions.home} name={APP_SCREENS.home} component={HomeNavigator} />
-            <Tab.Screen options={tabOptions.settings} name={APP_SCREENS.settings} component={SettingsNavigator} />
-            <Tab.Screen options={tabOptions.profile} name={APP_SCREENS.profile} component={ProfileNavigator} />
-          </Tab.Navigator>
+          <Main />
         </Provider>
       </ThemeProvider>
     </NavigationContainer>
