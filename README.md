@@ -6,6 +6,8 @@ The purpose of this project is to demonstrate the use of:
 - Redux and Redux-Saga for state management
 - React Navigation
 
+## Next steps: add i18n.
+
 
 # [TypeScript Example](https://www.typescriptlang.org/)
 
