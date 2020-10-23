@@ -1,14 +1,14 @@
 {
   "name": "My React App",
   "version": "1.0.0",
-  "android": {
-    "package": "io.expo.myreactapp"
-  },
   "expo": {
     "splash": {
       "image": "./assets/splash.png",
       "backgroundColor": "#4d4545",
       "resizeMode": "cover"
+    },
+    "android": {
+      "package": "com.ella33.myreactapp"
     }
   }
 }
